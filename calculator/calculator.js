@@ -18,21 +18,13 @@ function getCurrentUIValues() {
 }
 
 function setupIntialValues() {
-  // Get the inputs from the DOM.
-  const inputAmount = document.getElementById("loan-amount").value;
-  const inputYears = document.getElementById("loan-years").value;
-  const inputRate = document.getElementById("loan-rate").value;
-  // Put some default values in the inputs
-  if(!inputAmount) {
-    inputAmount = 1000;
-  }
-  if(!inputYears) {
-    inputYears = 5;
-  }
-  if(!inputRate) {
-    inputRate = 0.08;
-  }
-  // Call a function to calculate the current monthly payment
+  const values  = { amount: 10000, years: 10, rate: 4.5 };
+  const amountUI = document.getElementById("loan-amount");
+  amountUI.value = values.amount;
+  const yearsUI = document.getElementById("loan-years");
+  yearsUI.value = values.years;
+  const rateUI = document.getElementById("loan-rate");
+  rateUI.value = values.rate;
   update();
 }
 
